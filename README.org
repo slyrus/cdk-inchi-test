@@ -1,0 +1,20 @@
+* CDK-InChI tests
+
+This is a self-contained example of loading the CDK in ABCL and trying to call the InChI routines. In order to get this to work, I have to manually the aarch64 version of libjnainchi.dylib in /usr/local/lib.
+
+To load this, make sure this directory is on the asdf:*central-registry* path, or that there's a link to this directory in ~/quicklisp/local-projects, if you're using quicklisp.
+
+* To Load
+
+#+begin_src sh :session
+(pushnew *default-pathname-defaults* asdf:*central-registry*)
+
+#+end_src
+
+Then load with:
+
+#+begin_src sh :session
+(asdf:load-system "cdk-inchi-test")
+
+#+end_src
+
