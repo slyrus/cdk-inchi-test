@@ -6,10 +6,20 @@ To load this, make sure this directory is on the asdf:*central-registry* path, o
 
 * To Load
 
+If your using emacs and in the current directory, you can do:
+
 #+begin_src sh :session
 (pushnew *default-pathname-defaults* asdf:*central-registry*)
 
 #+end_src
+
+Otherwise, do:
+
+#+begin_src sh :session
+(pushnew ".../path/to/your/directory" asdf:*central-registry*)
+
+#+end_src
+
 
 Then load with:
 
